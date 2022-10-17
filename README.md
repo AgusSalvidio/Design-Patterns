@@ -1,8 +1,8 @@
 # Design-Patterns
 
-![Logo](assets/logo.svg)
+![Logo](assets/logo.jpg)
 
-What is this thing? “the motto”, the goals, the vision.
+A repo loaded with most used design patterns for object-oriented programming preferably in Smalltalk. Based on [The Design Patterns Smalltalk Companion](https://www.bookdepository.com/Design-Patterns-Smalltalk-Companion-Sherman-Alpert/9780201184624).
 
 [![Unit Tests](https://github.com/AgusSalvidio/Design-Patterns/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/AgusSalvidio/Design-Patterns/actions/workflows/unit-tests.yml/badge.svg)
 [![Coverage Status](https://codecov.io/github/AgusSalvidio/Design-Patterns/coverage.svg?branch=release-candidate)](https://codecov.io/gh/AgusSalvidio/Design-Patterns/branch/release-candidate)
@@ -13,8 +13,7 @@ What is this thing? “the motto”, the goals, the vision.
 [![Pharo 9.0](https://img.shields.io/badge/Pharo-9.0-informational)](https://pharo.org)
 [![Pharo 10](https://img.shields.io/badge/Pharo-10-informational)](https://pharo.org)
 
-Why would I care about this thing? When to use it? For whom is it designed?
-When not to use it?
+This repo is intended to help ST developers to learn and practice with design patterns for applications in an object oriented programming language. 
 
 ## Quick links
 
