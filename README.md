@@ -1,8 +1,8 @@
 # Design-Patterns
 
-![Logo](assets/logo.jpg)
+<img src="assets/logo.jpg" alt="Logo" width="200" height="200">
 
-A repo loaded with most used design patterns for object-oriented programming preferably in Smalltalk. Based on [The Design Patterns Smalltalk Companion](https://www.bookdepository.com/Design-Patterns-Smalltalk-Companion-Sherman-Alpert/9780201184624).
+A repo loaded with most used design patterns for object-oriented programming preferably in Smalltalk. Based on [The Design Patterns Smalltalk Companion](https://www.bookdepository.com/Design-Patterns-Smalltalk-Companion-Sherman-Alpert/9780201184624 =128x128).
 
 [![Unit Tests](https://github.com/AgusSalvidio/Design-Patterns/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/AgusSalvidio/Design-Patterns/actions/workflows/unit-tests.yml/badge.svg)
 [![Coverage Status](https://codecov.io/github/AgusSalvidio/Design-Patterns/coverage.svg?branch=release-candidate)](https://codecov.io/gh/AgusSalvidio/Design-Patterns/branch/release-candidate)
