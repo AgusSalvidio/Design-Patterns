@@ -22,6 +22,12 @@ BaselineOfDesignPatterns >> baselineNameOf: aDependencyRepresentation [
 	^ aDependencyRepresentation at: #baselineName
 ]
 
+{ #category : #'private - dependencies accessing' }
+BaselineOfDesignPatterns >> buoyDependency [
+
+	^ self dependencyTo: 'Buoy' hostedIn: 'github://ba-st/Buoy:v6.2.0/source'
+]
+
 { #category : #'private - dependencies set up' }
 BaselineOfDesignPatterns >> configure: aDependency asDependencyIn: aSpec [
 
@@ -38,10 +44,28 @@ BaselineOfDesignPatterns >> configure: aPackage asPackageIn: aSpec [
 		with: [ aSpec requires: (self requirementNamesOf: aPackage) ]
 ]
 
+{ #category : #'private - model package accessing' }
+BaselineOfDesignPatterns >> creationalPatternsModelPackage [
+
+	^ self
+		  packageNamed: 'DesignPatterns-CreationalPatterns-Model'
+		  requiring: 'Buoy'
+]
+
+{ #category : #'private - test package accessing' }
+BaselineOfDesignPatterns >> creationalPatternsTestPackage [
+
+	^ self
+		  packageNamed: 'DesignPatterns-CreationalPatterns-Model-Tests'
+		  requiring: 'DesignPatterns-CreationalPatterns-Model'
+]
+
 { #category : #'private - dependencies set up' }
 BaselineOfDesignPatterns >> dependencies [
 
 	^ OrderedCollection new
+		  add: self buoyDependency;
+		  yourself
 ]
 
 { #category : #'private - dependencies set up' }
@@ -59,10 +83,10 @@ BaselineOfDesignPatterns >> modelPackageNames [
 	^ self packageNamesFrom: self modelPackages
 ]
 
-{ #category : #'private - accessing' }
+{ #category : #'private - packages set up' }
 BaselineOfDesignPatterns >> modelPackages [
 
-	^ OrderedCollection new
+	^ OrderedCollection with: self creationalPatternsModelPackage
 ]
 
 { #category : #'private - packages set up' }
@@ -87,10 +111,13 @@ BaselineOfDesignPatterns >> packageNamesFrom: aPackageRepresentationCollection [
 		  self packageNameOf: aPackageRepresentation ]
 ]
 
-{ #category : #'private - accessing' }
+{ #category : #'private - packages set up' }
 BaselineOfDesignPatterns >> packages [
 
 	^ OrderedCollection new
+		  addAll: self modelPackages;
+		  addAll: self testPackages;
+		  yourself
 ]
 
 { #category : #baselines }
@@ -146,5 +173,5 @@ BaselineOfDesignPatterns >> testPackageNames [
 { #category : #'private - packages set up' }
 BaselineOfDesignPatterns >> testPackages [
 
-	^ OrderedCollection new
+	^ OrderedCollection with: self creationalPatternsTestPackage
 ]
