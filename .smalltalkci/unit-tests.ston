@@ -9,7 +9,7 @@ SmalltalkCISpec {
   ],
   #testing : {
     #coverage : {
-      #packages : [ 'Design-Patterns*' ],
+      #packages : [ 'DesignPatterns*' ],
       #format: #lcov
     }
   }
