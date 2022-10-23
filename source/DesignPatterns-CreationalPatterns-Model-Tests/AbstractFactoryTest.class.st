@@ -54,12 +54,15 @@ AbstractFactoryTest >> testCreateACar [
 { #category : #tests }
 AbstractFactoryTest >> testCreateCarPartFactory [
 
-	|factory|
-	
-	factory := FordFactory new.
-	
-	self 
-		assert: factory class equals: FordFactory.
+	| fordFactory porscheFactory toyotaFactory |
+	fordFactory := FordFactory new.
+	porscheFactory := PorscheFactory new.
+	toyotaFactory := ToyotaFactory new.
+
+	self
+		assert: fordFactory class equals: FordFactory;
+		assert: porscheFactory class equals: PorscheFactory;
+		assert: toyotaFactory class equals: ToyotaFactory
 ]
 
 { #category : #tests }
