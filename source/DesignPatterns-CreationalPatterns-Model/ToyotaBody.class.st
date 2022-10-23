@@ -1,5 +1,5 @@
 Class {
 	#name : #ToyotaBody,
 	#superclass : #Body,
-	#category : #'DesignPatterns-CreationalPatterns-Model-AbstractFactory'
+	#category : #'DesignPatterns-CreationalPatterns-Model-Base'
 }

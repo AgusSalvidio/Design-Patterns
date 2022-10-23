@@ -4,7 +4,7 @@ Class {
 	#instVars : [
 		'parts'
 	],
-	#category : #'DesignPatterns-CreationalPatterns-Model-AbstractFactory'
+	#category : #'DesignPatterns-CreationalPatterns-Model-Base'
 }
 
 { #category : #'instance creation' }
