@@ -1,5 +1,5 @@
 Class {
-	#name : #ToyotaBody,
-	#superclass : #Body,
+	#name : #Porsche4DoorSedanBody,
+	#superclass : #PorscheBody,
 	#category : #'DesignPatterns-CreationalPatterns-Model-Base'
 }

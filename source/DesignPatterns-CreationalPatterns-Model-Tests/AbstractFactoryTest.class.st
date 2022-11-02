@@ -14,12 +14,11 @@ AbstractFactoryTest >> testAddingPartToCar [
 		assert: car class equals: FordCar;
 		assert: car parts isEmpty.
 
-	engine := FordEngine.
+	engine := FordEngine new.
 	car add: engine.
 
 	self
-		assert: car parts size equals: 1;
-		assert: car parts first equals: engine
+		assert: car parts includes: engine
 ]
 
 { #category : #tests }
@@ -35,8 +34,8 @@ AbstractFactoryTest >> testAssembleCar [
 		assert: carAssembler class equals: CarAssembler;
 		assert: assembledCar class equals: FordCar;
 		assert: assembledCar parts size equals: 2;
-		assert: assembledCar parts first class equals: FordBody;
-		assert: assembledCar parts last class equals: FordEngine
+		assert: assembledCar hasBody;
+		assert: assembledCar hasEngine
 ]
 
 { #category : #tests }
@@ -82,6 +81,22 @@ AbstractFactoryTest >> testMakingCarParts [
 		assert: body class equals: FordBody;
 		assert: engine class equals: FordEngine
 	
+]
+
+{ #category : #tests }
+AbstractFactoryTest >> testUpdateCarPart [
+
+	| factory carAssembler assembledCar updatedCarPart |
+	
+	factory := FordFactory new.
+	carAssembler := CarAssembler new.
+
+	assembledCar := carAssembler assembleCarUsing: factory.
+
+	updatedCarPart := FordTurbocharged6CylinderEngine new.
+	assembledCar updateCarPartWith: updatedCarPart.
+
+	self assert: assembledCar parts includes: updatedCarPart
 ]
 
 { #category : #tests }

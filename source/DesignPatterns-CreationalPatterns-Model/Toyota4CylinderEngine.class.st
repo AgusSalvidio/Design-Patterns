@@ -1,5 +1,5 @@
 Class {
-	#name : #ToyotaBody,
-	#superclass : #Body,
+	#name : #Toyota4CylinderEngine,
+	#superclass : #ToyotaEngine,
 	#category : #'DesignPatterns-CreationalPatterns-Model-Base'
 }

@@ -1,5 +1,5 @@
 Class {
-	#name : #ToyotaBody,
-	#superclass : #Body,
+	#name : #Porsche4CylinderEngine,
+	#superclass : #PorscheEngine,
 	#category : #'DesignPatterns-CreationalPatterns-Model-Base'
 }

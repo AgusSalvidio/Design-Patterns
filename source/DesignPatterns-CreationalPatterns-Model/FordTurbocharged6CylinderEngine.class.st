@@ -1,5 +1,5 @@
 Class {
-	#name : #ToyotaBody,
-	#superclass : #Body,
+	#name : #FordTurbocharged6CylinderEngine,
+	#superclass : #FordEngine,
 	#category : #'DesignPatterns-CreationalPatterns-Model-Base'
 }
